@@ -1,0 +1,13 @@
+$OpenBSD$
+
+Index: CMakeLists.txt
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -14,6 +14,7 @@ pkg_check_modules(SDL REQUIRED sdl2 SDL2_image)
+ pkg_check_modules(FFMPEG REQUIRED libavformat libavcodec libswresample libavutil)
+ pkg_check_modules(CAIRO REQUIRED cairo)
+ pkg_check_modules(PANGO REQUIRED pangocairo)
++link_directories(/usr/local/lib)
+ 
+ include(GNUInstallDirs)
+ # GNUInstallDirs creates one variable for the install() commands, and one for
